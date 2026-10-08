@@ -1,6 +1,24 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Github Page</title>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Page</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    #output { margin-top: 1rem; color: steelblue; }
+  </style>
+</head>
+<body>
+  <h1>Test Page</h1>
+  <input id="name" placeholder="Type something">
+  <button onclick="greet()">Click me</button>
+  <p id="output"></p>
+
+  <script>
+    function greet() {
+      const name = document.getElementById("name").value || "stranger";
+      document.getElementById("output").textContent = `Hello, ${name}!`;
+    }
+  </script>
+</body>
 </html>
